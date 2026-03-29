@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 32px;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.screenshots img {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin: 20px 0;
+}
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #0066cc, #0099ff);
+    color: white;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,102,204,0.3);
+    margin: 20px 0 10px;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,102,204,0.4);
+}
+/* Кнопка переключения темы */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Светлая тема (по умолчанию) */
+body.light-theme {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+body.light-theme main {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+}
+
+body.light-theme h1 {
+    color: #333;
+}
+
+body.light-theme p {
+    color: #666;
+}
+
+/* Тёмная тема */
+body.dark-theme {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #eee;
+}
+
+body.dark-theme main {
+    background: rgba(30, 30, 46, 0.95);
+    color: #eee;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+body.dark-theme h1 {
+    color: #fff;
+}
+
+body.dark-theme p {
+    color: #ccc;
+}
+
+body.dark-theme .download-btn {
+    background: linear-gradient(45deg, #00aaff, #0066cc);
+}
+
+body.dark-theme .download-btn:hover {
+    background: linear-gradient(45deg, #33bbff, #0088ee);
+}
